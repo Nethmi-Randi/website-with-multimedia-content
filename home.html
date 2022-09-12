@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Home Page </title>
+    </head>
+    <body>
+        <table style="width: 100%;">
+            <tr>
+                <th> 
+                   <h1 style="background-color:rgb(233, 255, 30);">Happy Life Entertainments !!!</h1> 
+               </th>
+                <th>
+                   <a style="font-size: x-large;"href="home.html">Home</a>
+                </th>
+                <th>
+                   <a style="font-size: x-large;"href="audio.html">Audio</a>
+                </th>
+                <th>
+                    <a style="font-size: x-large;"href="video.html">Video</a>
+                </th>
+            </tr>
+          </table>
+          <img src="music.jfif" alt="music" width="1350px" height="200px" class="center"> 
+          <h1 style="text-align: center;"> Welcome to our site</h1> 
+          <P style="text-align: center;"> We have developed our web site for your Entertainment purposes.Here you are able to listen to 
+              the most famous songs these days as well as watch most famous music videos. 
+          </P> <br>
+          <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center;"><u>Top 3 videos </u></h1>
+          <div style="text-align: center;">
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/pOK08cRwE6c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           <br><br>
+           <iframe width="420" height="315" src="https://www.youtube.com/embed/pRpeEdMmmQ0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           <br><br>
+           <iframe width="420" height="315" src="https://www.youtube.com/embed/WTJSt4wP2ME" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           
+          </div>
+          <p>Click the following command to view your geographical coordinates</p>
+          <button onclick="getLocation()">Click Here </button>
+
+<p id="demo"></p>
+
+<script>// this is a script written in JavaScript(JS). A comprehesive lesson and labs on JS will be done very soon
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {//checks whether geolocation is supported
+    navigator.geolocation.getCurrentPosition(showPosition);// if getCurrentPosition is successful pass the location
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {//sets the text of the paragraph with id 'demo'
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+          
+           
+           
+    </body>
+</html>
